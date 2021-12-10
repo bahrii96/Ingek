@@ -1,0 +1,59 @@
+.hero-overlay {
+  max-width: 1400px;
+  max-height: 680px;
+
+  margin-left: auto;
+  margin-right: auto;
+  // background-size: cover;
+  // background-position: right;
+  // background-repeat: no-repeat;
+  background-image: url("./../../images/header.jpg");
+}
+
+.hero__title {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 130%;
+  /* or 78px */
+
+  color: #070707;
+  padding-top: 141px;
+  padding-bottom: 24px;
+}
+.hero__item-text {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 130%;
+
+  color: #070707;
+  margin-top: 20px;
+}
+.hero__button {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 130%;
+
+  text-align: center;
+
+  color: #070707;
+  width: 320px;
+  height: 60px;
+
+  background: #ffca28;
+  border-radius: 30px;
+  border: none;
+  transition: all 0.5s;
+  margin-top: 71px;
+  margin-bottom: 84px;
+}
+.hero__button:hover,
+.hero__button:focus {
+  background: #070707;
+  color: #ffca28;
+}

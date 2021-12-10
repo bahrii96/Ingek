@@ -1,0 +1,227 @@
+.form__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-2000px);
+  height: 834px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: ease 1s all;
+
+  z-index: 3;
+  // position: fixed;
+}
+.form__overlay.active {
+  opacity: 1;
+  transform: translateX(0);
+  // position: sticky;
+
+  // z-index: 4;
+}
+.form {
+  top: 80px;
+  left: 50%;
+  width: 320px;
+  height: 754px;
+  position: absolute;
+  // position: sticky;
+  background: #e5efff;
+  transform: translateX(-50%);
+  z-index: 4;
+}
+.form__title {
+  margin-left: 10px;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 120%;
+  /* or 36px */
+
+  color: #070707;
+  margin-top: 80px;
+  margin-bottom: 35px;
+}
+.form__span {
+  color: #004f9e;
+}
+.form__field {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 20px;
+  /* margin-left: 27px; */
+  margin-top: 0;
+  padding: 0;
+
+  /* margin-right: auto; */
+}
+.form__input {
+  width: 300px;
+  height: 60px;
+  border: none;
+
+  background: #ffffff;
+  border-radius: 10px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form__label {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 130%;
+  /* or 18px */
+
+  text-transform: uppercase;
+
+  color: #070707;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  transition: transform 250ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown) + .form__label {
+  font-family: "PT Sans";
+  color: #ffca28;
+  line-height: 1.2;
+  font-size: 12px;
+  text-align: center;
+
+  transform: translate(-6px, -45px);
+}
+.form__input:focus {
+  outline: none;
+  border: 2px solid #ffca28;
+}
+/*    */
+
+.form__button {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 130%;
+
+  color: #070707;
+  width: 300px;
+  height: 60px;
+  border: none;
+  background: #ffca28;
+  border-radius: 30px;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  transition: ease 1s all;
+  margin-top: 40px;
+}
+.form__button:hover {
+  background: #070707;
+  color: #ffca28;
+}
+.form__button--close {
+  position: absolute;
+  top: 24px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background: #e5efff;
+  transition: ease 1s all;
+  cursor: pointer;
+}
+.form__button--close:hover {
+  background: #ffca28;
+}
+.form__button--close::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  background-image: url("./../../images/close.svg");
+}
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+.close-form {
+  top: 80px;
+  left: 50%;
+
+  position: absolute;
+
+  transform: translateX(-500%);
+  // z-index: 3;
+
+  width: 320px;
+  height: 355px;
+  padding-left: 10px;
+  background: #e5efff;
+  background-image: url("./../../images/closs_form.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+  // transition: ease 1s all;
+}
+// .close-form__active {
+//   transform: translateX(-50%);
+//   opacity: 1;
+// }
+.close-form__title {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 120%;
+  /* identical to box height, or 36px */
+
+  // text-align: center;
+  padding-left: 10px;
+  color: #004f9e;
+  padding-top: 168px;
+}
+
+.close-form__text {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 155%;
+  /* or 28px */
+  padding-left: 10px;
+  color: #070707;
+}
+.close-form__btn {
+  position: absolute;
+  top: 24px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background: #e5efff;
+  transition: ease 1s all;
+  cursor: pointer;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 0;
+    background-size: contain;
+    background-position: center;
+    background-image: url("./../../images/close.svg");
+  }
+}
